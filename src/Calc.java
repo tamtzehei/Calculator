@@ -79,7 +79,7 @@ public class Calc extends GBFrame
 	{
 		Frame calc = new Calc();
 		calc.setSize(300,500);
-		calc.setBackground(Color.blue);
+		calc.setBackground(Color.GREEN);
 		calc.setVisible(true);
 	}
 	
