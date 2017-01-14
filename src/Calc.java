@@ -33,7 +33,7 @@ public class Calc extends GBFrame
 	Button add = addButton("+",6,1,1,1);
 	Button sub = addButton("-",6,2,1,1);
 	Button mult = addButton("*",7,1,1,1);
-	Button div = addButton("ึ",7,2,1,1);
+	Button div = addButton("ร–",7,2,1,1);
 	Button sine = addButton("sin",2,4,1,1);
 	Button cosine = addButton("cos",3,4,1,1);
 	Button tan = addButton("tan",4,4,1,1);
@@ -60,7 +60,7 @@ public class Calc extends GBFrame
 	Button eight = addButton("8",4,2,1,1);
 	Button nine = addButton("9",4,3,1,1);
 	Button zero = addButton("0",5,1,1,1);
-	Button pi = addButton("น", 8,1,1,1);
+	Button pi = addButton("ยน", 8,1,1,1);
 	Button e = addButton("e",9,2,1,1);
 	Button ans = addButton("Ans",9,1,1,1);
 	
@@ -79,7 +79,7 @@ public class Calc extends GBFrame
 	{
 		Frame calc = new Calc();
 		calc.setSize(300,500);
-		calc.setBackground(Color.GREEN);
+		calc.setBackground(Color.BLUE);
 		calc.setVisible(true);
 	}
 	
@@ -254,7 +254,7 @@ public class Calc extends GBFrame
 			}
 			j++;
 		}
-		while(nums.contains("*") || nums.contains("ึ"))
+		while(nums.contains("*") || nums.contains("ร–"))
 		{
 			if(nums.get(i).equals("*"))
 			{
@@ -264,7 +264,7 @@ public class Calc extends GBFrame
 				nums.remove(i);
 				i = 0;
 			}
-			else if(nums.get(i).equals("ึ"))
+			else if(nums.get(i).equals("ร–"))
 			{
 				nums.add(i - 1, Double.toString(Double.parseDouble(nums.get(i - 1)) / Double.parseDouble(nums.get(i + 1))));
 				nums.remove(i);
